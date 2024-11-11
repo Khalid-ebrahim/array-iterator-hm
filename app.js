@@ -88,24 +88,51 @@ const comments = [
   { text: 'Nice Nice Nice!', id: 542328 }
 ]
 
-// const veryOldInventors = inventors.filter((inventor) => {
-//   return inventor.year >= 1500 && inventor.year < 1600
-// })
+const veryOldInventors = inventors.filter((inventor) => {
+  return inventor.year >= 1500 && inventor.year < 1600
+})
 
-// console.log('Exercise 1 my result: ', veryOldInventors)
+console.log('Exercise 1 my result: ', veryOldInventors)
 
-// const inventorName = inventors.map((inventor) => {
-//   return inventor.first  && inventor.last
-// })
-// console.log('Exercise 2 my result: ', inventorName)
+const inventorName = inventors.map((inventor) => {
+  return inventor.first && inventor.last
+})
+console.log('Exercise 2 my result: ', inventorName)
 
-// const sortedByBirthYear = inventors.sort((inventor) => {
-//   return inventor.year
-// })
+const sortedByBirthYear = inventors.sort((inventor) => {
+  return inventor.year
+})
 
-// console.log('Exercise 3 my result: ', sortedByBirthYear)
+console.log('Exercise 3 my result: ', sortedByBirthYear)
 
-// const inventorNamedAda = inventors.find((inventor) => {
-//   return inventor.first === 'Ada'
-// })
-// console.log('Exercise 4 my result: ', inventorNamedAda)
+const inventorNamedAda = inventors.find((inventor) => {
+  return inventor.first === 'Ada'
+})
+console.log('Exercise 4 my result: ', inventorNamedAda)
+
+const firstLast = people.map((person) => {
+  let splitName = person.split(', ')
+  return `${splitName[1]} ${splitName[0]}`
+})
+
+console.log(firstLast)
+
+const isAdultPresent = devs.some((adult) => {
+  return adult.year > 2006
+})
+console.log('Exercise 6 my result: ', isAdultPresent)
+
+const isEveryone19OrOlder = devs.every((adult) => {
+  return adult.year < 2005
+})
+console.log('Exercise 7 my result: ', isEveryone19OrOlder)
+
+const commentById = comments.find((Id) => {
+  return Id.id === 823423
+})
+console.log('Exercise 8 my result: ', commentById)
+
+const idx = comments.findIndex((index) => {
+  return index.id === 123523
+})
+console.log('Exercise 9 my result: ', idx)
